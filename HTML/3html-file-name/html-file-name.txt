@@ -1,0 +1,5 @@
+Best practice :
+1. Use lower case
+2. no space, use (_) or (-)
+3. .html
+4. folder name : lower case and no space

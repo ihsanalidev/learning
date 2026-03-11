@@ -1,0 +1,16 @@
+1. function :
+- function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet("Alice")); // ✅ Bisa dipanggil sebelum deklarasi
+
+- function expresssion
+const greet = function(name) {
+    return `Hello, ${name}!`;
+};
+console.log(greet("Bob")); // ✅ Bisa dipanggil setelah deklarasi
+
+- arrow function
+const greet = (name) => `Hello, ${name}!`;
+console.log(greet("Charlie")); // ✅ Lebih ringkas

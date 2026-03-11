@@ -1,0 +1,5 @@
+1. Reserved character in HTML, called Entity
+2. If we want to use that character in our website, reccomended to use the symbol entity
+3. All list HTML entity :
+https://oinam.github.io/entities/
+https://html.spec.whatwg.org/multipage/named-characters.html

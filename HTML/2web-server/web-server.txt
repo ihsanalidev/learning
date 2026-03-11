@@ -1,0 +1,4 @@
+1. install live server extensions in vs code
+2. right bottom in vs code click go live -> example port 5500
+3. your own ip is : 127.0.0.1:5000
+4. choose html file, click it, it runs

@@ -1,0 +1,614 @@
+1. Teori
+tag = perintah dalam html yang memiliki aturan pembuka dan penutup co: <p></p>,<h1></h1>
+element = tag yang berisi kontennya
+void element = tag HTML yang tidak memiliki isi konten. contoh : <br>,<hr>
+attribute = informasi tambahan untuk tag yang kita gunakan. co: src
+HTML tidak case-sensitive, rekomendasinya huruf kecil semua dan jangan pakai spasi
+Extension Live Server > Go Live > 127.0.0.1:5500
+HTML Reserved : <, /, >
+HTML Entity : &lt;, &sol;, &gt;
+
+2. Heading, Paragraph
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+<p></p>
+<br>
+<hr>
+
+3. Formatting
+<b><strong>
+<i><em>
+<small>
+<del>
+<ins>
+<sub>
+<sup>
+
+4. Comment
+<!-- -->
+
+5. List
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+<ol>
+	<li></li>
+	<li></li>
+	<li></li>
+</ol>
+ <!-- attribute type = 1, i, I, a, A, -->
+<ol type="I">
+	<li></li>
+	<li></li>
+	<li></li>
+</ol>
+
+6. Link dan Bookmark
+<!-- attribute href = lokasi tujuan link tersebut -->
+<!-- attribute target = _self, _blank -->
+<!-- attribute title = judul yang keluar ketika mouse berada diatas link tersebut-->
+<a href="https://facebook.com" target="_blank" title="link facebook">Facebook</a>
+<a href="hello.html"></a>
+<a href="pzn/index.html"></a>
+<a href="/heading.html"></a>
+
+7. Bookmark
+<!-- Bookmark pada halaman yang sama -->
+<a href="#judul1"></a>
+<a href="#judul2"></a>
+<h1 id="judul1"></h1>
+<h1 id="judul2"></h>
+<!-- Bookmark pada halaman yang berbeda -->
+<a href="bookmark.html#judul1"></a>
+<a href="bookmark.html#judul2"></a>
+
+8. Image
+<!-- attribute src -> absolute URL & Relative URL -->
+<img src="https://www.example.com/images/picture.jpg" alt="Gambar">
+<img src="images/picture.jpg" alt="Gambar">
+<!-- attribute alt = alternatif jika gambar tidak tertampil dan juga search engine -->
+<img src="pzn.png" alt="logo programmer zaman now"></img>
+
+
+9. Picture (memberikan berbagai versi gambar kepada browser, yang bisa berbeda tergantung pada ukuran dan resolusi layar)
+<picture>
+  <source media="(min-width: 800px)" srcset="large-image.jpg">
+  <source media="(min-width: 400px)" srcset="medium-image.jpg">
+  <img src="small-image.jpg" alt="Deskripsi Gambar">
+</picture>
+<picture>
+  <source media="(max-width: 500px)" srcset="pzn-black.png">
+  <source media="(max-width: 1000px)" srcset="pzn-green.png">
+  <img src="pzn.png" alt="Programmer Zaman Now" style="width:250px; height:250px;">
+</picture>
+
+10. Pre (menampilkan code apa adanya)
+sql
+public static void main (string[] args){
+		System.out.println("Hello World");
+}
+
+11. Emoji 
+<h1> &#x1F600;, &#x1F600;, &#128526; </h1>
+
+
+12. Head (metadata untuk SEO title untuk judul pada tab browser)
+<head>
+		<title>Belajar HTML - PZN</title>
+		<meta name="author" content="Eko Kurniawan">
+		<meta name="keywords" content="HTML">
+		<meta name="description" content="Belajar HTML">
+</head>
+
+
+13. Favicon (ico, png, jpg, svg, atau gif)
+<head>
+		<title>Belajar HTML - PZN</title>
+		<link rel="icon" href="pzn.png">
+</head>
+
+
+14. Display (Block dan Inline)
+Block :
+- dimulai dengan baris baru
+- otomatis menambahkan jarak / margin secara otomatis sebelum dan setelah element
+- mengambil ukuran penuh, meregang dari kiri ke kanan
+- contoh tag : h1-h6, p, header, body, ul, li, ol, table, form
+
+Inline :
+- elemen tidak dimulai dengan baris baru
+- elemen menggunakan ukuran seperlunya saja
+- contoh : a, b, i, em, button, strong, input
+
+Div : 
+- Block
+- digunakan sebagai container / wadah
+- ketika ingin membedakan bagian seperti menu, content, footer, header
+
+Span :
+- Inline
+==================================================
+<div id="menu" style="background-color:yellow; ">
+		<ul>
+			<li>beranda</li>
+			<li>artikel</li>
+			<li>media sosial</li>
+		</ul>
+</div>
+<div id="content" style="background-color:pink;">
+		<h1>Judul Halaman</h1>
+		<p>Isi halaman</p>
+</div>
+<h1>
+<span style="color: red;">Programmer</span>
+<span style="color: blue;">Zaman</span>
+<span style="color: yellow;">Now</span>
+</h1>
+
+
+15. Video
+<video width="1280px" height="720px" controls autoplay>
+		<source src="video.mp4">
+</video>
+
+
+16. Audio
+<audio controls>
+		<source src="audio.mp3">
+</video>
+
+
+17. Inline Frame
+<iframe src="color.html" frameborder="0" height="500px" width ="1000px">
+		Browser tidak mendukung inline frame, ini opsional jika tidak terpakai maka hapus saja
+</iframe>
+
+
+18. Table
+table = membuat table
+tr = membuat row / baris
+th = membuat kolom header table
+td = membuat kolom isi table
+caption = keterangan table
+thead = grup header table
+tbody = grup isi table
+tfoot = grup footer table
+======================================================
+<table style="border : 1px solid black;">
+		<colgroup>
+				<col span="2" style="background-color: yellow;">
+				<col style="background-color: aqua;">
+		</colgroup>
+		<thead>
+				<tr>
+						<th colspan="2">Nama</th>
+						<th>Nilai</th>
+				</tr>
+		</thead>
+		<tbody>
+				<tr>
+						<td>Agung</td>
+						<td>Jaya</td>
+						<td>90</td>
+				</tr>
+				<tr>
+						<td>Budi</td>
+						<td>Nugroho</td>
+						<td>70</td>
+				</tr>
+		</tbody>
+		<tfoot>
+				<tr>
+						<td rowspan="2"></td>
+						<td>Total</td>
+						<td>160</td>
+				</tr>
+				<tr>
+						<td>Rata - rata</td>
+						<td>85</td>
+				</tr>
+		</tfoot>
+</table>
+
+19. Semantic (mengurangi penggunaan div, kejelasan coding, dan SEO)
+article = konten artikel
+aside = bagian disamping konten, misal sidebar
+figure = konten ilustrasi, diagram, foto, dll
+figurecaption = keterangan tag figure
+footer = footer document
+header = header document
+main = konten utama document
+mark = bagian yang dtandai atau highlight
+nav = navigasi link
+section = section di document
+details = bagian yang lebih detail yang bisa pengguna lihat
+summary = heading untuk tag details
+time = koneten waktu / tanggal
+====================================================
+<header>
+		<h1>Judul Halaman</h1>
+</header>
+<nav>
+		<ul>
+			<li><a href="">Beranda</a></li>
+			<li><a href="">Artikel</a></li>
+			<li><a href="">Kontak Kami</a></li>
+		</ul>
+</nav>
+<section>
+		<article>
+				<h1>Belajar HTML</h1>
+				<p>Isi Belajar HTML</p>
+		</article>
+		<article>
+				<h1>Belajar CSS</h1>
+				<p>Isi Belajar CSS</p>
+		</article>
+		<footer>
+				<p>powered by programmer zaman now <time datetime="2024">2024</time></p>
+		</footer>
+</section>
+
+20. Responsive
+<!--- Contoh pada element --->
+<img style="width: 100%; height:auto;" src="pzn.png" alt="Programmer"></img>
+<!--- vw = viewport width (UNTUK TEKS) --->
+<h1 style="font-size: 5vw;">Belajar Responsive</h1>
+
+21. id
+<style>
+		#top {
+		color: red;
+		}
+		#bottom {
+		color : blue;
+		}
+</style>
+<body>
+	<h1 id="top">Ini adalah TOP</h1>
+	<h1 id="bottom">Ini adalah BOTTOM</h1>
+</body>
+
+
+Tag Lainnya : [https://developer.mozilla.org/en-US/docs/Web/HTML/Element](https://developer.mozilla.org/en-US/docs/Web/HTML/ELement)
+
+================================================================
+
+1. Tag Form
+
+name = contoh | registrasi
+
+action = form-submit.html
+
+enctype = application/x-www-form-urlencoded | multipart/form-data
+
+method = get | post
+
+target = _blank | _self
+
+
+<form name="contoh" action="form-submit.html" enctype="application/x-www-form-urlencoded">
+</form>
+
+
+1. Input Text
+
+
+<p>Nama :</p> 
+<input type="text" name="nama">
+<p>Email :</p> 
+<input type="text" name="email">
+<p>Telepon :</p> 
+<input type="text" name="telepon">
+
+
+1. Label
+
+
+<label for="name">Nama :</label> 
+<input id="name" type="text" name="nama">
+<label for="email">Email :</label> 
+<input id="email" type="text" name="email">
+<label for="telepon">Telepon :</label> 
+<input id="telepon" type="text" name="telepon">
+
+
+1. Submit
+
+
+<input type="submit" value="Registrasi"></input>
+
+
+1. Memproses Input (get atau post)
+
+
+<form name="registrasi" action="recreive.html" method="get">
+
+
+1. Input Reset (bukan menghapus melainkan mengembalikasi nilai ke nilai awal atau default)
+
+
+<input type="reset" value="Reset"></input>
+
+
+1. Input Button
+
+
+<input type="button" value="Hello" onclick="alert('Hello')">
+<input type="button" value="World" onclick="alert('World')">
+
+
+1. Input Checkbox
+
+
+<form>
+		<p>Hobby :</p>
+		<input type="checkbox" name="gaming" checkbox="" id="gaming" value="Gaming">
+		<label for="gaming">Gaming</label>
+		<input type="checkbox" name="coding" checkbox="" id="coding" value="Coding">
+		<label for="coding">Coding</label>>
+		<input type="checkbox" name="reading" checkbox="" id="reading" value="Reading">
+		<label for="Reading">Reading</label>
+		<input type="submit" value="Simpan">
+</form>
+
+
+
+1. Input Color
+
+https://www.color-hex.com/
+
+
+<label for="favorite">Warna Kesukaan :</label>
+<input type="color" id="favorite" name="favorite" value="#000000"></input>
+
+
+1. Input Date
+
+
+<label for="join_date">Tanggal masuk :</label>
+<input type="date" id="join_date" name="join_date" value="2024-01-01"></input>
+
+
+1. Input Datetime
+
+
+<label for="jam_masuk">Jam Masuk :</label>
+<input type="datetime-local" id="jam_masuk" name="jam_masuk" value="2024-01-01T07:00"></input>
+
+
+1. Input Month
+
+
+<label for="expired">Bulan Kadaluarsa:</label>
+<input type="month" id="expired" name="expired" value="2024-04"></input>
+
+
+1. Input Time 
+
+
+<label for="jam_masuk">Jam Masuk :</label>
+<input type="time" id="jam_masuk" name="jam_masuk" value="08:00"></input>
+<label for="jam_keluar">Jam Keluar :</label>
+<input type="time" id="jam_keluar" name="jam_keluar" value="17:00"></input>
+
+
+1. Input Week
+
+
+<label for="waktu_mulai">Waktu Mulai :</label>
+<input type="week" id="waktu_mulai" name="waktu_mulai" value="2024-W01"></input>
+<label for="waktu_selesai">Waktu Selesai :</label>
+<input type="week" id="waktu_mulai" name="waktu_mulai" value="2024-W52"></input>
+
+
+1. Input Email
+
+
+<label for="email">Email :</label>
+<input type="email" id="email" name="email" required></input>
+
+
+1. Input File
+
+WAJIB method=”post” dan enctype=”multipart/form-data”
+
+- GET tidak boleh karena data file tidak bisa disimpan dalam query parameter
+- multipart berarti ada data binary atau data file
+
+
+<form action="receive.html" method="post" enctype="multipart/form-data">
+		<label for="profile">Gambar Profile :</label>
+		<input type="file" id="profile" name="profile">
+</form>
+
+
+1. Input Hidden
+
+
+<form action="">
+		<input type="hidden" name="user_id" value="khannedy">
+		<label for="nama">Nama :</label>
+		<input type="text" id="nama" name="nama"><br>
+		<input type="submit" name="Simpan">
+</form>
+
+
+1. Input Image
+
+
+<form action="">
+		<input type="hidden" name="user_id" value="khannedy">
+		<label for="nama">Nama :</label>
+		<input type="text" id="nama" name="nama"><br>
+		<input type="image" src="https://interactive-examples.mdn.mozilla.net/media/examples/login-button.png" alt="Tombol Simpan">
+</form>
+
+
+1. Input Number
+
+
+<label for="nilai_ujian">Nilai Ujian</label>
+<input type="number" id="nilai_ujian" name="nilai_ujian" min="0" max="100" value="0">
+<input type="submit" value="Simpan">
+
+
+1. Input Password
+
+
+<form action="" method="post">
+		<label for="email">Email :</label>
+		<input type="email" id="email" name="email">
+		<label for="password">Password :</label>
+		<input type="password" id="password" name="password">
+		<input type="submit" name="Simpan">
+</form>
+
+
+1. Input Radio (Untuk 1 jawaban, sedangkan checkbox bisa lebih dari satu)
+
+
+<form action="">
+		Budi memiliki uang 10.000, dibelikan coklat 5.000, sisa uangnya adalah<br>
+		<input type="radio" name="jawaban" id="jawaban1" value="A"><label for="jawaban1">4.500</label><br>
+		<input type="radio" name="jawaban" id="jawaban2" value="B"><label for="jawaban2">5.000</label><br>
+		<input type="radio" name="jawaban" id="jawaban3" value="C"><label for="jawaban3">5.500</label><br>
+		<input type="radio" name="jawaban" id="jawaban4" value="D"><label for="jawaban4">6.000</label><br>
+</form>
+
+
+1. Input Range
+
+
+<label for="nilai_ujian">Nilai Ujian :</label>
+<input type="range" id="nilai_ujian" name="nilai_ujian" min="0" max="0" value="50">
+
+
+1. Input Telephone
+
+https://regexr.com/
+
+(62)[0-9]*
+
+(62)[0-9]{5,20}
+
+
+<label for="telephone">Telephone :</label>
+<input type="tel" id="telephone" name="telephone" pattern="(62)[0-9]{5,20}">
+
+
+1. Input URL
+
+
+<label for="website">Website :</label>
+<input type="url" id="website" name="website">
+
+
+1. Text Area Tag
+
+
+<label for="deskripsi">Deskripsi :</label>
+<textarea name="deskripsi" id="deskripsi" cols="50" rows="10">Ini isi teks awal</textarea>
+
+
+1. Button Tag
+
+
+<label for="nama">Nama :</p> 
+<input type="text" name="nama" id="nama">
+<button type="button">
+    <img src="https://interactive-examples.mdn.mozilla.net/media/examples/login-button.png" alt="Gambar Tombol">
+</button>
+<button type="reset">Reset</button>
+<button type="submit">Simpan</button>
+
+
+1. Select Tag (seperti radio text tetapi untuk opsi yang banyak)
+- Option Tag
+
+
+<form action="">
+		<label for="hobby">Hobby</label>
+		<select name="hobby" id="hobby">
+				<option value="coding" selected>Coding</option>
+				<option value="gaming">Gaming</option>
+				<option value="reading">Reading</option>
+		</select>
+</form>
+
+
+- Multiple Select
+
+
+<form action="">
+		<label for="hobby">Hobby</label>
+		<select name="hobby" id="hobby" multiple size="2">
+				<option value="coding" selected>Coding</option>
+				<option value="gaming">Gaming</option>
+				<option value="reading">Reading</option>
+		</select>
+</form>
+
+
+- Option Group Tag
+
+
+<form action="">
+		<label for="hobby">Hobby</label>
+		<select name="hobby" id="hobby">
+            <optgroup label="coding">
+				<option value="java">java</option>
+				<option value="javascript">javascript</option>
+				<option value="php">php</option>
+            </optgroup>
+            <optgroup label="gaming">
+				<option value="zelda">zelda</option>
+				<option value="pokemon">pokemon</option>
+				<option value="tekken">tekken</option>
+            </optgroup>
+            <optgroup label="sport">
+				<option value="basket">basket</option>
+				<option value="badminton">badminton</option>
+				<option value="basket">basket</option>
+            </optgroup>
+		</select>
+        <button type="submit">Simpan</button>
+    </form>
+
+
+1. Data List Tag
+
+
+<label for="hobby">Hobby</label>
+<input type="text" name="hobby" id="hobby" list="hobbies"><br>
+<button type="submit" name="Simpan">Simpan</button>
+
+<datalist id="hobbies">
+        <option value="coding">Coding</option>
+        <option value="gaming">Gaming</option>
+        <option value="reading">Reading</option>
+</datalist>
+
+
+1. Field Set Tag
+- Legend Tag
+<form action="">
+        <fieldset>
+            <legend>Identitas</legend>
+            <label for="nama">Nama : </label><input type="text" name="nama" id="nama"><br>
+            <label for="email">Email : </label><input type="email" name="email" id="email"><br>
+            <label for="telfon">Telfon : </label><input type="tel" name="telfon" id="telfon" pattern="[0-9]{5,20}">
+        </fieldset>
+        <fieldset>
+            <legend>Alamat</legend>
+            <label for="jalan">Jalan : </label><input type="text" name="jalan" id="jalan"><br>
+            <label for="kota">Kota : </label><input type="text" name="kota" id="kota"><br>
+            <label for="provinsi">Provinsi : </label><input type="text" name="provinsi" id="provinsi">
+        </fieldset>
+    </form>

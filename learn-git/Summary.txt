@@ -1,0 +1,87 @@
+git is an open source distributed version control system (VCS)
+=====
+install git
+https://git-scm.com/downloads
+=====
+git config --global credential.helper store
+verify:
+git config --global credential.helper
+//store
+git config --global user.name "ihsan"
+git config --global user.email "ihsanaliwork@gmail.com"
+verify :
+git config --global user.name
+git config --global user.email
+=====
+starting a new project
+1. login github
+2. make a new repository
+-----
+- note : remote repository = github | local repository = laptop
+- If you already have a project locally but not yet on a remote, here are example steps :
+git remote add origin https://github.com/ihsanalidev/learn-git.git
+git branch -M main
+git push -u origin main
+- If you already have a project on a remote but not yet on your local machine, here are the steps to get started:
+open repo in github
+click "<>code"
+copy link ssh
+in terminal run this code : git clone copy-paste-link-ssh
+(this will copy and connect remote to local machine)
+=====
+step :
+git init
+* in source control all code files will show in source control section in vs code
+git add .
+* you can do this by click + to all the files in source control
+git commit -m "Initial Commit"
+git log
+* git log is to check local commit repository
+git remote add origin https://github.com/ihsanalidev/learn-git.git
+* this means already connect to remote repository, link can get in github repo
+git push -u origin master
+* -u means upstream is to configure this local branch to track the remote branch
+* master is the branch that we pushing to
+* Github need authorize : Authorizing will redirect to http://127.0.0.1:52211
+git branch feature/login-system
+git branch
+git switch feature/login-system
+git branch
+PROCESS ADD/EDIT/DELETE CODE, TESTING
+git status
+git add Summary.txt
+git commit -m "adding notes about step in git"
+git push -u origin feature/login-system
+-----
+GUI Github
+click button compare and pull request
+if there is no conflict (able to merge)
+create pull request
+merge pull request
+comfirm merge
+=====
+git pull origin master
+*git pull = git fetch + git merge
+=====
+if u made mistake/error and want to back to previous version 
+git log
+git revert [commit-hash]
+*copy hash in git log
+git revert 56708ea5c8910fc20b778e80eb4be17ee45b8911
+git log
+=====
+delete commit history in local
+git reset --hard 74458c2028649714b493703dcff2efe27ac8289e
+git log
+=====
+delete commit history in remote
+git push --force origin master
+=====
+reset to the initial commit (but have changes in working directory)
+git stash
+*saved working directory in index state WIP on master : 74458c2 Initial Commit
+in changes area the file will be stash away
+git reset --hard 74458c2028649714b493703dcff2efe27ac8289e
+*reset it all back
+git stash pop
+=====
