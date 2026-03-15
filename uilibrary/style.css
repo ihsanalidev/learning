@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+}
+/* =================================================== BASE ===================================================== */
+.section-title {
+    text-align: center;
+}
+/* =================================================== BUTTON ===================================================== */
+.btn-contained {
+    display: inline-block;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #395EBC;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+.btn-outlined {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #395EBC;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    color: #395EBC;
+    cursor: pointer;
+}
+.btn-text {
+    display: inline-block;
+    padding: 8px 18px;
+    border: none;
+    background-color: white;
+    font-size: 14px;
+    color: #395EBC;
+    cursor: pointer;
+}
+.btn-text::after {
+    content: " →";
+}
+/* =================================================== NAVBAR ===================================================== */
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 45px;
+    background-color: #333;
+}
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.nav-menu a:hover {
+    color: #f39c12;
+}
+/* =================================================== DROPDOWN ===================================================== */
+.dropdown {
+    
+}
